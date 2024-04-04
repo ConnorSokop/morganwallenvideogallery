@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: conic-gradient(from .5turn at 50% 110%, white, orange);
+}
+
+header, footer {
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: tan;
+    color: white;
+    margin-bottom: 2em;
+}
+
+header img {
+    max-width: 250px;
+    padding: 2em;
+}
+
+header h2 {
+    max-width: 250%;
+}
+
+nav {
+    flex-basis: 20%;
+}
+
+main {
+    flex-basis: 65%;
+}
+
+nav ul {
+    position: sticky;
+    top: 50px;
+    list-style-type: none;
+    width: 90%;
+}
+
+nav li {
+    margin-bottom: 1em;
+}
+
+nav a {
+    display: block;
+    background-color: brown;
+    color: white;
+    text-decoration: none;
+    padding: 1em .5em;
+    border: 2px ridge brown 10px;
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+article {
+    margin-bottom: 2em;
+}
+
+.videowrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin: 0 auto;
+    border: 6px ridge #808080;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    padding: 2em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: tan;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+    header {
+        flex-direction: column;
+    }
+    header h2 {
+        text-align: center;
+    }
+    main {
+        flex-basis: 100%;
+    }
+    .videowrapper {
+        border: none;
+    }
+}
+
